@@ -1,4 +1,4 @@
-import { Grid, Paper } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import { BsLinkedin, BsGithub, BsFacebook, BsInstagram } from "react-icons/bs";
 import { Container } from "../styles/Homepage.style";
@@ -84,7 +84,7 @@ const Footer = () => {
       <Container textAlign="center" pt="1.5rem">
         <div className="copyright text-white py-1">&copy; Copyright. All Rights Reserved</div>
         <div className="credits text-white">
-          by <a>Chanantaphon Chansuksri</a>
+          by <p>Chanantaphon Chansuksri</p>
         </div>
       </Container>
     </div>

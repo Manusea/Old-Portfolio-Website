@@ -7,7 +7,6 @@ import {
   Text,
   Grid,
 } from "../styles/Homepage.style";
-import useWindowDimensions from "../components/useWindowDimensions";
 import Education from "./Education";
 import "../styles/Homepage.css";
 import { useDispatch } from "react-redux";
@@ -15,15 +14,11 @@ import { fetchAsyncEducations } from "../redux/educations/educationSlice";
 import IndexPage from "./IndexPage";
 import "../styles/HomepageStyle.scss";
 import ProjectExpreience from "./ProjectExpreience";
-import Contract from "./Contract";
 import Footer from "./Footer";
 import Skills from "./Skills";
-// import { Grid } from "@mui/material";
 import MyResume from "../assets/CV_Chanantaphon_Chansuksri.pdf";
 
 export default function HomePage() {
-  const { height, width } = useWindowDimensions();
-  const hgc = height + "px";
 
   const dispatch = useDispatch();
 
@@ -33,7 +28,7 @@ export default function HomePage() {
 
   return (
     <Body height={"auto"}>
-      <a className="anchor" id="Home"></a>
+      <a className="anchor" id="Home" style={{display: 'none'}}></a>
       <IndexPage />
       <HeaderContianer hg="auto" pb="5rem">
         <a className="anchor" id="About"></a>

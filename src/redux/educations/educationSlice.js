@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import portfolioApi from "../../api/portfolioApi";
 import PortfolioService from "../../api/portfolioServices";
 
 export const fetchAsyncEducations = createAsyncThunk(
@@ -13,7 +12,7 @@ export const fetchAsyncEducations = createAsyncThunk(
 export const addEducations = createAsyncThunk(
   "educations/addEducations",
   async (data) => {
-    const response = await PortfolioService.create(data);
+    await PortfolioService.create(data);
     return data;
   }
 );

@@ -11,6 +11,7 @@ const Skills = () => {
               width={100}
               height={100}
               src={require("../assets/React_logo_wordmark.png")}
+              alt="React"
             />
             <div className="text-skills">
               <h1>React</h1>
@@ -21,6 +22,7 @@ const Skills = () => {
               width={100}
               height={100}
               src={require("../assets/nodejs-logo.png")}
+              alt="Node.js"
             />
             <div className="text-skills">
               <h1>Node.js</h1>
@@ -32,6 +34,7 @@ const Skills = () => {
               height={100}
               src={require("../assets/laravel.png")}
               style={{ margin: "auto" }}
+              alt="Laravel"
             />
             <div className="text-skills">
               <h1>Laravel</h1>
@@ -42,6 +45,7 @@ const Skills = () => {
               width={100}
               height={100}
               src={require("../assets/angular.png")}
+              alt="Angular"
             />
             <div className="text-skills">
               <h1>Angular</h1>

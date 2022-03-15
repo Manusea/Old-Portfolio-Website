@@ -1,21 +1,12 @@
-import logo from "./logo.svg";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-
 import * as React from "react";
-import { useEffect } from "react";
-
-import Education from "./pages/Education";
 import ResponsiveAppBar from "./components/Navbar";
 import SignIn from "./pages/Login";
 import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/Dashboard/DashboardPage";
 import SideBar from "./components/SideBar";
 import HeaderEdit from "./pages/Dashboard/HeaderEdit";
-import Layout from "./pages/Dashboard/Layout";
-import EducationCRUD from "./pages/Dashboard/Education/EducationCRUD";
-import { useDispatch } from "react-redux";
-import { fetchAsyncEducations } from "./redux/educations/educationSlice";
 import AddEducation from "./pages/Dashboard/Education/AddEducation";
 import EditEducations from "./pages/Dashboard/Education/EditEducations";
 import { AuthContextProvider } from "./auth/AuthContext";

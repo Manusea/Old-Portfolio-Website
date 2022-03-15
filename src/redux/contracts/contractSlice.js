@@ -4,7 +4,7 @@ import ContractService from "../../api/ContractServices";
 export const addContract = createAsyncThunk(
   "contracts/addContract",
   async (data) => {
-    const response = await ContractService.create(data);
+    await ContractService.create(data);
     return data;
   }
 );

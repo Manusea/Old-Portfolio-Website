@@ -10,7 +10,6 @@ import {
 } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import "../styles/SideBar.css"
-import { Container } from "../styles/Homepage.style";
 import { Link } from "react-router-dom";
 
 export default function SideBar() {

@@ -1,18 +1,8 @@
 import React from 'react'
-import CardStyle from "../styles/CardStyle.scss"
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { deleteEducations, updateEducations } from '../redux/educations/educationSlice';
 
 const EducationCard = (props) =>{
     const {data} = props;
-
-    const dispatch = useDispatch();
-
-    const handleEdit = (id) => {
-      dispatch(updateEducations())
-    }
-
   return (
     <div className='card-item'>
       <div className='card-lists'>

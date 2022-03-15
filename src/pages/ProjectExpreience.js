@@ -18,6 +18,7 @@ const ProjectExpreience = () => {
                 width={238.5}
                 height={238.5}
                 src={require("../assets/LOGO.png")}
+                alt="To-do List Application"
               />
             </div>
             <div className="cards-title">
@@ -44,6 +45,7 @@ const ProjectExpreience = () => {
                 height={250}
                 style={{ borderRadius: "20%" }}
                 src={require("../assets/covid.png")}
+                alt="CovidViualization Website"
               />
             </div>
             <div className="cards-title">
@@ -65,6 +67,7 @@ const ProjectExpreience = () => {
                 height={250}
                 style={{ borderRadius: "20%" }}
                 src={require("../assets/KruChana.png")}
+                alt="KruChana Application"
               />
             </div>
             <div className="cards-title">
@@ -83,6 +86,7 @@ const ProjectExpreience = () => {
                 height={250}
                 style={{ borderRadius: "20%" }}
                 src={require("../assets/face.png")}
+                alt="MOC Application"
               />
             </div>
             <div className="cards-title">

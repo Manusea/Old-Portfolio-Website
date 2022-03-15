@@ -7,16 +7,14 @@ import {
 import { TextField, Box } from "@mui/material";
 import { useDispatch } from "react-redux";
 import {
-  addEducations,
   deleteEducations,
   updateEducations,
 } from "../../../redux/educations/educationSlice";
 import PortfolioService from "../../../api/portfolioServices";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const EditEducation = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { id } = useParams();
   const [currentEducation, setCurrentEducation] = useState({
     university_name: "",

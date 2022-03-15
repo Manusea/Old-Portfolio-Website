@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Body, HeaderContianer } from "../styles/Homepage.style";
 import { Toolbar, Grid, Box, TextField } from "@mui/material";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 import Footer from "./Footer";
 import { useDispatch } from "react-redux";
 import { addContract } from "../redux/contracts/contractSlice";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 
 const Contract = () => {
+  const MySwal = withReactContent(Swal)
+
   const [state, setState] = useState({
     subject: "",
     fullname: "",
@@ -18,7 +22,13 @@ const Contract = () => {
 
   const { subject, fullname, email, phonenumber, message } = state;
 
-  const [error, setError] = useState("");
+  // const [error, setError] = useState({
+  //   subject: [],
+  //   fullname: [],
+  //   email: [],
+  //   phonenumber: [],
+  //   message: [],
+  // });
 
   const handleInputChange = (e) => {
     let { name, value } = e.target;
@@ -36,9 +46,15 @@ const Contract = () => {
       !phonenumber ||
       !message 
     ) {
-      setError("Please insert data");
+      // setError("Please insert data");
+      console.log("Please insert data")
     } else {
       dispatch(addContract(state));
+      MySwal.fire({
+        title: "Success!",
+        text: 'Completely sent contract data.',
+        icon: "success"
+      })
       setState({
         subject: "",
         fullname: "",
@@ -49,12 +65,6 @@ const Contract = () => {
     }
   }
 
-  const validate = () => {
-    
-  }
-
-  const onSubmit = (data) => console.log(data)
-
   return (
     <>
       <Toolbar />
@@ -63,6 +73,7 @@ const Contract = () => {
           <h1 className="text-white">Contract</h1>
         </div>
 
+        
         <HeaderContianer>
           <Grid item xs={12}>
             <Grid container justifyContent={"center"} spacing={10}>
@@ -96,7 +107,6 @@ const Contract = () => {
               </Grid>
               <Grid item>
                 <div className="contract-form">
-                  <form>
                   <Box
                     component="form"
                     sx={{
@@ -129,11 +139,10 @@ const Contract = () => {
                         variant="filled"
                         style={{ width: "20rem" }}
                         value={subject}
-                        InputLabelProps={{
-                          style: { color: '#fff' },
+                        InputLabelProps={{ 
+                          style: { color: '#fff', fontFamily: "Prompt" },
                         }}
-                        onChange={handleInputChange}
-                        helperText="error."
+                        onChange={handleInputChange}                
                       />
                       <TextField
                         id="filled-search"
@@ -145,9 +154,8 @@ const Contract = () => {
                         value={fullname}
                         onChange={handleInputChange}
                         InputLabelProps={{
-                          style: { color: '#fff' },
+                          style: { color: '#fff', fontFamily: "Prompt" },
                         }}
-                        helperText="error."
                       />
                     </div>
                     <div>
@@ -161,9 +169,8 @@ const Contract = () => {
                         value={email}
                         onChange={handleInputChange}
                         InputLabelProps={{
-                          style: { color: '#fff' },
+                          style: { color: '#fff', fontFamily: "Prompt" },
                         }}
-                        helperText="error."
                       />
                       <TextField
                         id="filled-search"
@@ -175,9 +182,8 @@ const Contract = () => {
                         value={phonenumber}
                         onChange={handleInputChange}
                         InputLabelProps={{
-                          style: { color: '#fff' },
+                          style: { color: '#fff', fontFamily: "Prompt" },
                         }}
-                        helperText="error."
                       />
                     </div>
                     <div>
@@ -195,14 +201,12 @@ const Contract = () => {
                         value={message}
                         onChange={handleInputChange}
                         InputLabelProps={{
-                          style: { color: '#fff' },
+                          style: { color: '#fff', fontFamily: "Prompt" },
                         }}
-                        helperText="error."
                       />
                     </div>
                   </Box>
-                  </form>
-                  <button type="submit" className="loginBtn" style={{ marginTop: "3rem" }}>
+                  <button className="loginBtn" style={{ marginTop: "3rem" }} onClick={handleSubmit}>
                     Send Message
                   </button>
                 </div>

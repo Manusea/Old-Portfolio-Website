@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/IndexStyle.scss";
-import travel_01 from "../assets/travel-01.jpg";
 
 const IndexPage = () => {
   return (
