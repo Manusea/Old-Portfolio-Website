@@ -1,0 +1,25 @@
+.addEducation {
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid whitesmoke;
+    border-radius: 30px;
+}
+
+.addEducation h1 {
+    color: black;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.addEducation button {
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+    color: #fff;
+    padding: .5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 10px;
+  }

@@ -1,0 +1,34 @@
+.addEducation {
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid whitesmoke;
+    border-radius: 30px;
+}
+
+.addEducation h1 {
+    padding-bottom: 1rem;
+}
+
+.DashboardContent {
+    height: 100vh;
+    h1 {
+        color: white;
+        text-align: center;
+    }
+}
+
+.dashboard-header {
+    padding-bottom: 4rem;
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.education-wrapper {
+    h1 {
+        color: black;
+    }
+}
