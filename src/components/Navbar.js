@@ -150,6 +150,12 @@ const ResponsiveAppBar = () => {
             >
               <Link to={'/contact'} className="text-white">contact</Link>
             </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              <Link to={'/login'} className="text-white">Temp Login</Link>
+            </Button>
 
           </Box>
         </Toolbar>
