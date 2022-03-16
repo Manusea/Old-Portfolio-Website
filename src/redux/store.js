@@ -1,10 +1,10 @@
 import {configureStore} from "@reduxjs/toolkit"
 import educationReducer from "./educations/educationSlice"
-import contractReducer from "./contracts/contractSlice"
+import contactReducer from "./contracts/contactSlice"
 
 export const store = configureStore({
     reducer: {
         educations: educationReducer,
-        contracts: contractReducer,
+        contacts: contactReducer,
     },
 })

@@ -4,12 +4,11 @@ import { Toolbar, Grid, Box, TextField } from "@mui/material";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 import Footer from "./Footer";
 import { useDispatch } from "react-redux";
-import { addContract } from "../redux/contracts/contractSlice";
+import { addContact } from "../redux/contracts/contactSlice";
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-
-const Contract = () => {
+const Contact = () => {
   const MySwal = withReactContent(Swal)
 
   const [state, setState] = useState({
@@ -49,10 +48,10 @@ const Contract = () => {
       // setError("Please insert data");
       console.log("Please insert data")
     } else {
-      dispatch(addContract(state));
+      dispatch(addContact(state));
       MySwal.fire({
         title: "Success!",
-        text: 'Completely sent contract data.',
+        text: 'Completely sent contact data.',
         icon: "success"
       })
       setState({
@@ -70,7 +69,7 @@ const Contract = () => {
       <Toolbar />
       <Body height="auto">
         <div className="page-title">
-          <h1 className="text-white">Contract</h1>
+          <h1 className="text-white">Contact</h1>
         </div>
 
         
@@ -78,8 +77,8 @@ const Contract = () => {
           <Grid item xs={12}>
             <Grid container justifyContent={"center"} spacing={10}>
               <Grid item>
-                <div className="contract-content">
-                  <div className="contract-icons">
+                <div className="contact-content">
+                  <div className="contact-icons">
                     <HiMail
                       color="white"
                       size={40}
@@ -87,7 +86,7 @@ const Contract = () => {
                     />
                     chanantaphon.cha@gmail.com
                   </div>
-                  <div className="contract-icons">
+                  <div className="contact-icons">
                     <HiPhone
                       color="white"
                       size={40}
@@ -95,7 +94,7 @@ const Contract = () => {
                     />
                     +66 955033632
                   </div>
-                  <div className="contract-icons">
+                  <div className="contact-icons">
                     <HiLocationMarker
                       color="white"
                       size={40}
@@ -106,7 +105,7 @@ const Contract = () => {
                 </div>
               </Grid>
               <Grid item>
-                <div className="contract-form">
+                <div className="contact-form">
                   <Box
                     component="form"
                     sx={{
@@ -216,7 +215,7 @@ const Contract = () => {
           {/* <div className="row">
             <div className="col-xs-12 col-sm-4">Hi</div>
             <div className="col-xs-12 col-sm-8">
-              <div className="contract-form">
+              <div className="contact-form">
                 <p>How Can I Help You?</p>
                 <Box
                   component="form"
@@ -251,4 +250,4 @@ const Contract = () => {
   );
 };
 
-export default Contract;
+export default Contact;

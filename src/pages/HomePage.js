@@ -108,8 +108,8 @@ export default function HomePage() {
       <Education />
       <a className="anchor" id="Project"></a>
       <ProjectExpreience />
-      <a className="anchor" id="Contract"></a>
-      {/* <Contract /> */}
+      <a className="anchor" id="contact"></a>
+      {/* <contact /> */}
       <Footer />
     </Body>
   );
