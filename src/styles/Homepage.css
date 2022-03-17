@@ -30,6 +30,13 @@
     cursor: default;
   }
 
+  @media screen and (max-width: 425px) {
+  
+    .loginBtn {
+      font-size: 1rem;
+    }
+    
+  }
 .education h1{
   color: white;
 }

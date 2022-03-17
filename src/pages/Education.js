@@ -15,7 +15,7 @@ export default function Education() {
         ))
       : null;
   return (
-    <div className="education">
+    <div className="">
       <HeaderContianer>
         <div className="education-content">
           <h2>Education</h2>

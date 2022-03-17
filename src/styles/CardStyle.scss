@@ -54,6 +54,59 @@
   color: white;
 }
 
+.card-item-dashboard {
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+  background-color: #1d1d1d;
+  padding: 2rem;
+  border: 1px solid whitesmoke;
+  border-radius: 30px;
+  text-align: start;
+  h1 {
+    color: white;
+  }
+  #university {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+  }
+  #faculty {
+    color: white;
+    font-size: 1rem;
+  }
+  #department {
+    color: white;
+    font-size: 1rem;
+  }
+  #GPA {
+    color: white;
+    font-size: 1rem;
+  }
+  #startyear {
+    color: white;
+    font-size: 1rem;
+  }
+  #endyear {
+    color: white;
+    font-size: 1rem;
+  }
+
+  &:hover {
+    box-shadow: rgba(111, 76, 255, 0.5) 0px 0px 20px 0px;
+    transition: all 0.5s;
+  }
+
+  button {
+    padding: .5rem;
+    border-radius: 10px;
+    
+  }
+}
+
+.card-list-dashboard {
+  padding-bottom: 2rem;
+  color: white;
+}
+
 .btn-gradient-border {
   border: 2px double transparent;
   background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)),

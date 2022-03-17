@@ -9,11 +9,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import "../styles/Homepage.css"
+import "../styles/Homepage.css";
 import { Link } from "react-router-dom";
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Slide from '@mui/material/Slide';
-import PropTypes from 'prop-types';
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+import Slide from "@mui/material/Slide";
+import PropTypes from "prop-types";
+import { Grid } from "@mui/material";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -102,12 +103,68 @@ const ResponsiveAppBar = () => {
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">
-                <a href="#Home" className="text-black">Home</a>
-                </Typography>
-                <Typography textAlign="center">
-                <a href="#About" className="text-black">About</a>
-                </Typography>
+                <Grid
+                  container
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  spacing={2}
+                >
+                  <Grid item>
+                    <div
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.replace("/#Home");
+                      }}
+                      style={{ fontFamily: "Prompt" }}
+                    >
+                      Home
+                    </div>
+                
+                  </Grid>
+                  <Grid item>
+                  <div
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.replace("/#About");
+                      }}
+                      style={{ fontFamily: "Prompt" }}
+                    >
+                      About
+                    </div>
+                  </Grid>
+                  <Grid item>
+                  <div
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.replace("/#Education");
+                      }}
+                      style={{ fontFamily: "Prompt" }}
+                    >
+                      Education
+                    </div>
+                  </Grid>
+                  <Grid item>
+                  <div
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.replace("/#Project");
+                      }}
+                      style={{ fontFamily: "Prompt" }}
+                    >
+                      Project
+                    </div>
+                  </Grid>
+                  <Grid item>
+                    <Link
+                      to={"/contact"}
+                      className="text-black"
+                      style={{ fontFamily: "Prompt" }}
+                    >
+                      Contact
+                    </Link>
+                  </Grid>
+                </Grid>
               </MenuItem>
             </Menu>
           </Box>
@@ -117,46 +174,77 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            LOGO
+            PORTFOLIO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              <div onClick={(e) => {e.preventDefault(); window.location.replace('/#Home');}}>Home</div>
+              <div
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.replace("/#Home");
+                }}
+              >
+                Home
+              </div>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              <div onClick={(e) => {e.preventDefault(); window.location.replace('/#About');}}>About</div>
+              <div
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.replace("/#About");
+                }}
+              >
+                About
+              </div>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              <div onClick={(e) => {e.preventDefault(); window.location.replace('/#Education');}}>Education</div>
+              <div
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.replace("/#Education");
+                }}
+              >
+                Education
+              </div>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              <div onClick={(e) => {e.preventDefault(); window.location.replace('/#Project');}}>Project</div>
+              <div
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.replace("/#Project");
+                }}
+              >
+                Project
+              </div>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              <Link to={'/contact'} className="text-white">contact</Link>
+              <Link to={"/contact"} className="text-white">
+                contact
+              </Link>
             </Button>
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              <Link to={'/login'} className="text-white">Temp Login</Link>
+              <Link to={"/login"} className="text-white">
+                Dashboard
+              </Link>
             </Button>
-
           </Box>
         </Toolbar>
       </Container>

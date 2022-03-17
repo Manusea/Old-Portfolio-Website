@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const EducationCard = (props) =>{
     const {data} = props;
   return (
-    <div className='card-item'>
-      <div className='card-lists'>
+    <div className='card-item-dashboard'>
+      <div className='card-lists-dashboard'>
         <h1 id="university">{data.university_name}</h1>
         <h1 id="faculty">Faculty Name: {data.faculty}</h1>
         <h1 id="department">Department Name: {data.department_name}</h1>

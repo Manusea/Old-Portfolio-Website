@@ -1,3 +1,11 @@
+$labtop_4k: 2560px;
+$labtop_L: 1920px;
+$labtop_M: 1440px;
+$labtop_S: 1024px;
+$tablet: 768px;
+$mobile_L: 425px;
+$mobile_M: 375px;
+
 a.anchor {
   display: block;
   position: relative;
@@ -9,24 +17,40 @@ a {
   color: white;
 }
 
-.profile-picture {
-  display: flex;
-  align-items: center;
+.profile {
   justify-content: center;
-  border-radius: 50%;
-  border: 7px solid grey;
-  height: 380px;
-  width: 380px;
-  margin: 0 0px 0 100px;
+  align-items: center;
+}
+
+.profile-info {
+  color: #fff;
+  text-align: start;
+  padding-top:.5rem;
+  font-size: 1rem;
+}
+
+.profile-picture {
+  float: right;
+  // align-items: center;
+  // justify-content: center;
+  // border-radius: 50%;
+  // border: 7px solid grey;
+  // height: 380px;
+  // width: 380px;
+  // margin: 0 0px 0 100px;
 }
 
 .profile-picture-background {
-  height: 92%;
-  width: 92%;
-  background-image: url("../assets/profile2.jpg");
+  height: 25rem;
+  width: 25rem;
+  // background-image: url("../assets/profile2.jpg");
   background-size: cover;
   border-radius: 50%;
-  background-repeat: no-repeat;
+  transition: all 0.5s;
+  &:hover {
+    box-shadow: 0px 0px 30px 0px rgba(256, 256, 256, 0.1);
+    transition: all 0.5s;
+  }
 }
 
 .skills-container {
@@ -74,7 +98,6 @@ a {
   animation: textclip 2s linear infinite;
   display: inline-block;
   font-size: 3.5rem;
-  
 }
 
 @keyframes textclip {
@@ -99,9 +122,71 @@ a {
     font-weight: bold;
     letter-spacing: 2px;
   }
-
 }
 .contact-icons {
   color: white;
   padding-bottom: 1rem;
+}
+
+@media screen and (max-width: $labtop_S) {
+
+  .profile-picture-background {
+    height: 20rem;
+    width: 20rem;
+  }
+
+  .profile-info {
+    h2 {
+      font-size: 3rem;
+    }
+    p{
+      font-size: .8rem;
+    }
+  }
+  
+}
+
+@media screen and (max-width: $tablet) {
+
+
+  
+}
+
+@media screen and (max-width: $mobile_L) {
+
+  .profile-picture-background {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  .profile-info {
+    h2 {
+      font-size: 1.5rem;
+    }
+    p{
+      font-size: .6rem;
+    }
+  }
+
+  .loginBtn {
+    font-size: 1rem;
+  }
+  .IndexContent {
+    h1 {
+      font-size: 1rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  .index-text {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .contact-icons{
+    font-size: .8rem;
+  }
+  
 }
