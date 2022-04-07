@@ -24,14 +24,15 @@ const ProjectExpreience = () => {
               <div className="cards">
                 <div className="cards-media">
                   <img
-                    width={238.5}
-                    height={238.5}
-                    src={require("../assets/LOGO.png")}
-                    alt="To-do List Application"
+                    width={250}
+                    height={250}
+                    style={{ borderRadius: "20%" }}
+                    src={require("../assets/MOC.png")}
+                    alt="MOC Application"
                   />
                 </div>
                 <div className="cards-title">
-                  <h1>Todolist Applciaiton</h1>
+                  <h1>MOC Application</h1>
                 </div>
                 <Grid item>
                   <button
@@ -39,7 +40,7 @@ const ProjectExpreience = () => {
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.href =
-                        "https://github.com/Manusea/todolistapp";
+                        "https://github.com/Manusea/moc_project_new";
                     }}
                   >
                     Github
@@ -92,7 +93,11 @@ const ProjectExpreience = () => {
                   <h1>KruChaNa Application</h1>
                 </div>
                 <Grid item>
-                  <button className="button button2">Github</button>
+                  <button className="button button2" onClick={(e) => {
+                      e.preventDefault();
+                      window.location.href =
+                        "https://github.com/Manusea/KruChana-Application";
+                    }}>Github</button>
                 </Grid>
               </div>
             </Grid>
@@ -101,15 +106,14 @@ const ProjectExpreience = () => {
               <div className="cards">
                 <div className="cards-media">
                   <img
-                    width={250}
-                    height={250}
-                    style={{ borderRadius: "20%" }}
-                    src={require("../assets/face.png")}
-                    alt="MOC Application"
+                    width={238.5}
+                    height={238.5}
+                    src={require("../assets/LOGO.png")}
+                    alt="To-do List Application"
                   />
                 </div>
                 <div className="cards-title">
-                  <h1>MOC Application</h1>
+                  <h1>Todolist Applciaiton</h1>
                 </div>
                 <Grid item>
                   <button
@@ -117,7 +121,7 @@ const ProjectExpreience = () => {
                     onClick={(e) => {
                       e.preventDefault();
                       window.location.href =
-                        "https://github.com/Manusea/moc_project_new";
+                        "https://github.com/Manusea/todolistapp";
                     }}
                   >
                     Github
@@ -125,6 +129,8 @@ const ProjectExpreience = () => {
                 </Grid>
               </div>
             </Grid>
+
+            
           </Grid>
         </Grid>
 
