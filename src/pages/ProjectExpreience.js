@@ -10,7 +10,7 @@ const ProjectExpreience = () => {
     <div className="">
       <HeaderContianer>
         <div className="education-content">
-          <h2>Project Expreience</h2>
+          <h2>Project Experience</h2>
         </div>
 
         <Grid xs={12}>
